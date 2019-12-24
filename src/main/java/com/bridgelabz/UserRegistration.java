@@ -29,4 +29,9 @@ public class UserRegistration {
         pattern = Pattern.compile("^91\\s[0-9]{10}$");
         return pattern.matcher(mobileNumber).matches();
     }
+
+    public boolean passworValidation(String password) {
+        pattern =Pattern.compile("[0-9A-Za-z]{8,}");
+        return pattern.matcher(password).matches();
+    }
 }

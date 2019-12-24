@@ -110,5 +110,19 @@ public class UserValidationTest {
 
     }
 
+    @Test
+    public void whenPasswordConatinMinEightCharacter_shouldReturnTrue() {
 
+        boolean validationStatus = userRegistration.passworValidation("Bridgelabz");
+        Assert.assertTrue(validationStatus);
+
+    }
+
+    @Test
+    public void whenPasswordConatinLessThanEightCharacter_shouldReturnFalse() {
+
+        boolean validationStatus = userRegistration.passworValidation("Bridgee");
+        Assert.assertFalse(validationStatus);
+
+    }
 }
