@@ -40,32 +40,75 @@ public class UserValidationTest {
 
     @Test
     public void whenGivenLastNameStartWithSmallLetter_shouldReturnFale() {
+
         boolean validationStatus = userRegistration.lastNameValidation("bandgar");
         Assert.assertFalse(validationStatus);
+
     }
 
     @Test
     public void whenGivenLastNameLengthLessThan3_sholdReturnFalse() {
+
         boolean validationStatus = userRegistration.lastNameValidation("Ba");
         Assert.assertFalse(validationStatus);
+
     }
 
     @Test
     public void whenGivenLastNameLengthGreaterThan3_shouldReturnTrue() {
+
         boolean validationStatus = userRegistration.lastNameValidation("Bandg");
         Assert.assertTrue(validationStatus);
+
     }
 
     @Test
     public void whenGivenEmailIdWithThreeMandatoryPart_shouldReturnTrue() {
+
         boolean validationStatus = userRegistration.emailIdValidation("abc@bridgelabz.com");
         Assert.assertEquals(true,validationStatus);
+
     }
 
     @Test
     public void whenGivenEmailIdWithOptionalPart_shouldReturnTrue() {
+
         boolean validationStatus = userRegistration.emailIdValidation("abc.bcd@gmail.com");
         Assert.assertEquals(true,validationStatus);
+
     }
-    
+
+    @Test
+    public void whenGivenMobileNumberWithCountryCode_shouldReturnTrue() {
+
+        boolean validationStatus = userRegistration.mobileNumberValidation("91 1234567890");
+        Assert.assertEquals(true,validationStatus);
+
+    }
+
+    @Test
+    public void whenGivenMobileNumberWithLengthLessThan10_shouldReturnFalse() {
+
+        boolean validationStatus = userRegistration.mobileNumberValidation("91 12345789");
+        Assert.assertFalse(validationStatus);
+
+    }
+
+    @Test
+    public void whenGivenMobileNumberContainsLetter_shouldReturnFalse() {
+
+        boolean validationStatus = userRegistration.mobileNumberValidation("91 123457A89");
+        Assert.assertFalse(validationStatus);
+
+    }
+
+    @Test
+    public void whenGivenMobileNumberWithoutSpaceAfterCountryCode_sholdReturnFalse() {
+
+        boolean validationStatus = userRegistration.mobileNumberValidation("911234567890");
+        Assert.assertFalse(validationStatus);
+
+    }
+
+
 }

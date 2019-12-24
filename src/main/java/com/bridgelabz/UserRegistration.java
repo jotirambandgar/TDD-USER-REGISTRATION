@@ -24,4 +24,9 @@ public class UserRegistration {
         pattern = Pattern.compile("[A-Za-z0-9]{2,}([.][A-Za-z0-9]{2,})?[@][A-Za-z]{1,}[.][a-zA-z]{2,4}");
         return pattern.matcher(emailId).matches();
     }
+
+    public boolean mobileNumberValidation(String mobileNumber) {
+        pattern = Pattern.compile("^91\\s[0-9]{10}$");
+        return pattern.matcher(mobileNumber).matches();
+    }
 }
