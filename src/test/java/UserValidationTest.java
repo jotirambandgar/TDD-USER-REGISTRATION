@@ -31,4 +31,30 @@ public class UserValidationTest {
         Assert.assertTrue(validationStatus);
     }
 
+     @Test
+    public void whenGivenLastNameWith1stLetterCap_shouldReturnTrue() {
+
+        boolean validationStatus = userRegistration.lastNameValidation("Bandgar");
+        Assert.assertEquals(true,validationStatus);
+    }
+
+    @Test
+    public void whenGivenLastNameStartWithSmallLetter_shouldReturnFale() {
+        boolean validationStatus = userRegistration.lastNameValidation("bandgar");
+        Assert.assertFalse(validationStatus);
+    }
+
+    @Test
+    public void whenGivenLastNameLengthLessThan3_sholdReturnFalse() {
+        boolean validationStatus = userRegistration.lastNameValidation("Ba");
+        Assert.assertFalse(validationStatus);
+    }
+
+    @Test
+    public void whenGivenLastNameLengthGreaterThan3_shouldReturnTrue() {
+        boolean validationStatus = userRegistration.lastNameValidation("Bandg");
+        Assert.assertTrue(validationStatus);
+    }
+
+
 }
