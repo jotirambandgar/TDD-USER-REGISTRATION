@@ -56,5 +56,16 @@ public class UserValidationTest {
         Assert.assertTrue(validationStatus);
     }
 
+    @Test
+    public void whenGivenEmailIdWithThreeMandatoryPart_shouldReturnTrue() {
+        boolean validationStatus = userRegistration.emailIdValidation("abc@bridgelabz.com");
+        Assert.assertEquals(true,validationStatus);
+    }
 
+    @Test
+    public void whenGivenEmailIdWithOptionalPart_shouldReturnTrue() {
+        boolean validationStatus = userRegistration.emailIdValidation("abc.bcd@gmail.com");
+        Assert.assertEquals(true,validationStatus);
+    }
+    
 }
