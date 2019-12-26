@@ -73,7 +73,7 @@ public class UserValidationTest {
     @Test
     public void whenGivenEmailIdWithOptionalPart_shouldReturnTrue() {
 
-        boolean validationStatus = userRegistration.emailIdValidation("abc.bcd@gmail.com");
+        boolean validationStatus = userRegistration.emailIdValidation("abc.bcd@gmail.co.in");
         Assert.assertEquals(true,validationStatus);
 
     }
@@ -134,7 +134,10 @@ public class UserValidationTest {
 
     @Test
     public void whenGivenPasswordNotConatinAnyNumber_shouldReturnFalse() {
+
         boolean validationStatus = userRegistration.passworValidation("Bridelabz@");
         Assert.assertEquals(false,validationStatus);
+
     }
+
 }
