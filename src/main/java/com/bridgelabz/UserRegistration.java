@@ -31,7 +31,7 @@ public class UserRegistration {
     }
 
     public boolean passworValidation(String password) {
-        pattern =Pattern.compile("^(?=.*[A-Z])([a-z0-9-_.#@*]?).{8,}$");
+        pattern =Pattern.compile("^(?=.*[A-Z])(?=.*[0-9])[-_.#@/]{2}([a-z]?).{8,}$");
         return pattern.matcher(password).matches();
     }
 }

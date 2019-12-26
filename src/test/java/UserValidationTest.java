@@ -111,7 +111,7 @@ public class UserValidationTest {
     }
 
     @Test
-    public void whenPasswordConatinMinEightCharacter_shouldReturnTrue() {
+    public void whenGivenPasswordConatinMinEightCharacter_shouldReturnTrue() {
 
         boolean validationStatus = userRegistration.passworValidation("Bridgelabz@1");
         Assert.assertTrue(validationStatus);
@@ -119,7 +119,7 @@ public class UserValidationTest {
     }
 
     @Test
-    public void whenPasswordConatinLessThanEightCharacter_shouldReturnFalse() {
+    public void whenGivenPasswordConatinLessThanEightCharacter_shouldReturnFalse() {
 
         boolean validationStatus = userRegistration.passworValidation("Bridgee");
         Assert.assertFalse(validationStatus);
@@ -127,8 +127,14 @@ public class UserValidationTest {
     }
 
     @Test
-    public void whenPasswordContainAllSmallLatter_shouldReturnFalse() {
+    public void whenGivenPasswordContainAllSmallLatter_shouldReturnFalse() {
         boolean validationStatus = userRegistration.passworValidation("bridgeelabz@1");
         Assert.assertFalse(validationStatus);
+    }
+
+    @Test
+    public void whenGivenPasswordNotConatinAnyNumber_shouldReturnFalse() {
+        boolean validationStatus = userRegistration.passworValidation("Bridelabz@");
+        Assert.assertEquals(false,validationStatus);
     }
 }
