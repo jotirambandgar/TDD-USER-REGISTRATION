@@ -21,7 +21,7 @@ public class UserRegistration {
 
 
     public boolean emailIdValidation(String emailId) {
-        pattern = Pattern.compile("[A-Za-z0-9]{2,}([.][A-Za-z0-9]{2,})?[@][A-Za-z]{1,}[.][a-zA-z]{2,4}([.][A-Za-z]{2,4})?$");
+        pattern = Pattern.compile("[A-Za-z0-9-]{2,}([.][A-Za-z0-9]{2,})?[@][A-Za-z]{1,}[.][a-zA-z]{2,4}([.][A-Za-z]{2,4})?$");
         return pattern.matcher(emailId).matches();
     }
 
@@ -31,7 +31,7 @@ public class UserRegistration {
     }
 
     public boolean passworValidation(String password) {
-        pattern =Pattern.compile("^(?=.*[A-Z])(?=.*[0-9])[-_.#@/]{2}([a-z]?).{8,}$");
+        pattern =Pattern.compile("^(?=.*[A-Z])(?=.*[0-9])([-_.#@/a-z]?).{8,}$");
         return pattern.matcher(password).matches();
     }
 }

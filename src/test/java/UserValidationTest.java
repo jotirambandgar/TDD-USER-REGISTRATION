@@ -14,6 +14,13 @@ public class UserValidationTest {
     }
 
     @Test
+    public void whenGivenFirstNameContainNumber_shouldReturnFalse() {
+
+        boolean validationStatus = userRegistration.firstNameValidation("Jotiram12");
+        Assert.assertEquals(false,validationStatus);
+    }
+
+    @Test
     public void whenGivenFirstNameStartWithSmallLetter_shouldReturnFale() {
         boolean validationStatus = userRegistration.firstNameValidation("jotiram");
         Assert.assertFalse(validationStatus);

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="EmailAddressValidationTest" tests="19" skipped="0" failures="0" errors="0" timestamp="2019-12-26T06:32:01" hostname="jotiram-Inspiron-15-3567" time="0.016">
+  <properties/>
+  <testcase name="testEmailIdValidation[0]" classname="EmailAddressValidationTest" time="0.001"/>
+  <testcase name="testEmailIdValidation[1]" classname="EmailAddressValidationTest" time="0.0"/>
+  <testcase name="testEmailIdValidation[2]" classname="EmailAddressValidationTest" time="0.0"/>
+  <testcase name="testEmailIdValidation[3]" classname="EmailAddressValidationTest" time="0.0"/>
+  <testcase name="testEmailIdValidation[4]" classname="EmailAddressValidationTest" time="0.0"/>
+  <testcase name="testEmailIdValidation[5]" classname="EmailAddressValidationTest" time="0.0"/>
+  <testcase name="testEmailIdValidation[6]" classname="EmailAddressValidationTest" time="0.003"/>
+  <testcase name="testEmailIdValidation[7]" classname="EmailAddressValidationTest" time="0.001"/>
+  <testcase name="testEmailIdValidation[8]" classname="EmailAddressValidationTest" time="0.0"/>
+  <testcase name="testEmailIdValidation[9]" classname="EmailAddressValidationTest" time="0.001"/>
+  <testcase name="testEmailIdValidation[10]" classname="EmailAddressValidationTest" time="0.0"/>
+  <testcase name="testEmailIdValidation[11]" classname="EmailAddressValidationTest" time="0.001"/>
+  <testcase name="testEmailIdValidation[12]" classname="EmailAddressValidationTest" time="0.0"/>
+  <testcase name="testEmailIdValidation[13]" classname="EmailAddressValidationTest" time="0.001"/>
+  <testcase name="testEmailIdValidation[14]" classname="EmailAddressValidationTest" time="0.0"/>
+  <testcase name="testEmailIdValidation[15]" classname="EmailAddressValidationTest" time="0.002"/>
+  <testcase name="testEmailIdValidation[16]" classname="EmailAddressValidationTest" time="0.0"/>
+  <testcase name="testEmailIdValidation[17]" classname="EmailAddressValidationTest" time="0.0"/>
+  <testcase name="testEmailIdValidation[18]" classname="EmailAddressValidationTest" time="0.001"/>
+  <system-out><![CDATA[abc@1.com
+abc-gmail.com
+abc@.com.my
+abc123@gmail.a
+abc123@.com
+abc123@.com.com
+.abc@abc.com
+abc()*@gmail.com
+abc@%*.com
+abc@abc@gmail.com
+abc@gmail.com.1a
+abc@gmail.com.aa.au
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
